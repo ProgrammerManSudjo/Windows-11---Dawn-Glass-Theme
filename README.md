@@ -10,6 +10,12 @@ Originally posted in the Komorebi Discord, sharing here so it's easier to track 
 
 > **Note:** A one-click installer script is planned for a future release. Windows makes scripted dotfile installs annoying (no native symlink/config convention like Linux), so for now installation is manual. Bear with me.
 
+## Base Theme
+
+This rice is built on top of [**BlackIsBack for Windows 11**](https://www.deviantart.com/niivu/art/BlackIsBack-for-Windows-11-957793766) by [niivu](https://www.deviantart.com/niivu). Go show them some support — this wouldn't look the way it does without their theme as the foundation.
+
+For applying Windows themes in general (not just this one), follow niivu's own guide: [Installing Windows Themes (UPDATED)](https://www.deviantart.com/niivu/art/Installing-Windows-Themes-UPDATED-708835586).
+
 ## Preview
 
 <p align="center">
@@ -27,6 +33,7 @@ Originally posted in the Komorebi Discord, sharing here so it's easier to track 
 | `walls/` | Personal wallpaper collection |
 | `windhawk/` | Windhawk mod configs (text-based, see below) |
 | `yasb/` | Status bar config |
+| `dwmblurglass/` | DWMBlurGlass config (blur effect, see below) |
 
 ## Installation
 
@@ -67,12 +74,19 @@ Copy the `yasb` folder into `.config` as well.
 
 ⚠️ **Heads up:** the included config was built for a **two-monitor** setup. If it doesn't behave correctly on a single monitor, please [open an issue](../../issues) and I'll get it fixed.
 
-### walls
-Just a personal wallpaper collection — drop into wherever you keep your wallpapers. Got a cool wallpaper you think fits the vibe? Feel free to suggest it via issue or PR.
-
 ### File Pilot - File Explorer Alternative
 Not required, but used in the showcase as a faster alternative to Windows Explorer.
 Download it from [filepilot.tech](https://filepilot.tech/download).
+
+### Blur Effect
+The blur seen throughout the showcase is achieved with [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass).
+
+1. Grab the **2.3.2 Beta3** build from the [Releases page](https://github.com/Maplespe/DWMBlurGlass/releases) — this is the most stable version to use
+2. Run `DWMBlurGlass.exe` and click **Install**
+3. Import the config from this repo's `dwmblurglass/config.ini`
+
+### walls
+Just a personal wallpaper collection — drop into wherever you keep your wallpapers. Got a cool wallpaper you think fits the vibe? Feel free to suggest it via issue or PR.
 
 ## Fonts
 
@@ -99,7 +113,7 @@ This is very much a living project. If you:
 - Have wallpapers to contribute
 - Hit a bug (especially with `yasb` on single-monitor setups)
 
-...please open an issue if there are any issues .
+...please open an issue if there are any issues.
 
 ## Roadmap
 
