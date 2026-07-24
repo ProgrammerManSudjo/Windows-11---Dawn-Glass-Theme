@@ -13,7 +13,7 @@ Originally posted in the Komorebi Discord — sharing here so it's easier to tra
 ## Preview
 
 <p align="center">
-  <img src="readme/desktop-preview.png" width="800">
+  <img src="readme/desktop-preview.png" width="800" height="500">
 </p>
 
 ## What's Included
