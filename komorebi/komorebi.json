@@ -1,0 +1,185 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.34/schema.json",
+  "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 10,
+  "default_container_padding": 5,
+  "mouse_follows_focus": false,
+  "border": false,
+  "border_width": 2,
+  "border_offset": -1,
+  "transparency": false,
+  "transparency_alpha": 245,
+  "transparency_ignore_rules": [
+    {
+      "kind": "Title",
+      "id": "YouTube",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Exe",
+      "id": "obs64.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "animation": {
+    "enabled": false,
+    "duration": 270,
+    "fps": 160,
+    "style": "EaseOutBack",
+    "transparency": "Linear"
+  },
+  "stackbar": {
+    "height": 30,
+    "mode": "Never",
+    "tabs": {
+      "width": 150,
+      "focused_text": "#ffffff",
+      "unfocused_text": "#ffffff",
+      "background": "#010101"
+    }
+  },
+  "display_index_preferences": {
+    "0": "AUS242A-5&2e68ef6&0&UID4356",
+    "1": "PHLC244-5&2e68ef6&0&UID4353"
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "steamwebhelper.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "II",
+          "layout_rules": {
+              "1": "BSP",
+              "4": "Grid",
+          },
+          "initial_workspace_rules": [
+            {
+            "kind": "Exe",
+            "id": "explorer.exe",
+            "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "FPilot.exe",
+              "matching_staategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "III",
+          "layout_rules": {
+              "1": "BSP",
+              "4": "Grid",
+          },
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "chrome.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "obs64.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "IV",
+          "layout_rules": {
+              "1": "BSP",
+              "4": "Grid",
+          },
+          "initial_workspace_rules": [
+            {
+              "kind": "Title",
+              "id": "Adobe",
+              "matching_strategy": "Contains"
+            }
+          ]
+        },
+        {
+          "name": "V",
+          "layout_rules": {
+              "1": "BSP",
+              "4": "Grid",
+          },
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "steamwebhelper.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Obsidian.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "Rows",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Discord.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "II",
+          "layout": "Rows",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Beeper.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "WhatsApp.Root.exe",
+              "matching_strategy": "Equals"
+            }
+
+          ]
+        },
+        {
+          "name": "III",
+          "layout": "Rows",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Spotify.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "IV",
+          "layout": "Rows"
+        },
+        {
+          "name": "V",
+          "layout": "Rows"
+        }
+      ]
+    }
+  ]
+}

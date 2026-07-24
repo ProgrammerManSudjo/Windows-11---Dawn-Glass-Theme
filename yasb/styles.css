@@ -1,0 +1,862 @@
+* {
+    font-size: 13px;
+    color: #d1d1d1;
+    font-weight: 600;
+    font-family: "Segoe UI", "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+}
+
+.yasb-bar {
+    /* MAIN YASB BAR */
+    padding: 2 2 2 2;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* border-radius: 18px; */
+    /* border-bottom-left-radius: 20px; */
+    /* border-bottom-right-radius: 20px; */
+}
+
+.yasb-bar.dark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.yasb-bar .label {
+    color: #d1d1d1;
+}
+
+.yasb-bar.dark .label {
+    color: #d1d1d1;
+}
+
+/* WIDGET GROUP */
+.container-left .container-right {
+    flex: 0 1 auto;
+}
+
+.container-center {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+/* GLOBAL WIDGET */
+.widget {
+    padding: 0 8px;
+    margin: 0;
+}
+
+.widget .label {
+    padding: 0px 2px 2px 2px;
+    font-family: "JetBrainsMono NFP";
+}
+
+.widget .label.alt {
+    padding: 1px 8px 1px 8px;
+}
+
+/* DATE CLOCK WIDGET */
+/* ---------------------------------- */
+/* DATE AND CLOCK WIDGET STYLING */
+/* Styles specific to the clock and calendar widget components. */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* DATE AND CLOCK WIDGET STYLING */
+/* Styles specific to the clock and calendar widget components. */
+/* ---------------------------------- */
+.clock-widget {
+    font-family: "ProFontWindows Nerd Font";
+    margin: 5px 5px 5px 5px;
+    background-color: rgba(0, 0, 0, 255);
+    border-radius: 14px; /* Reverted from 12px to 14px */
+}
+
+.clock-widget .label {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 400;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.clock-widget .label:hover {
+    color: #ffffff;
+}
+
+.calendar {
+    background-color: rgba(0, 0, 0, 155);
+}
+
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+    background-color: rgba(100, 100, 100, 0);
+    color: rgba(200, 200, 200, 0.6);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.calendar .calendar-table::item:selected {
+    color: rgb(255, 255, 255);
+}
+
+.calendar .day-label {
+    margin-top: 20px;
+}
+
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.calendar .month-label {
+    font-weight: normal;
+}
+
+.calendar .date-label {
+    font-size: 88px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    margin-top: -20px;
+}
+
+/* ACTIVE LAYOUT WIDGET */
+/* ---------------------------------- */
+/* KOMOREBI ACTIVE LAYOUT WIDGET STYLING */
+/* Styles for the widget displaying the current active layout name and icon. */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* KOMOREBI ACTIVE LAYOUT WIDGET STYLING */
+/* Styles for the widget displaying the current active layout name and icon. */
+/* ---------------------------------- */
+.komorebi-active-layout {
+    margin: 5px 5px 5px 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+    border-radius: 14px; /* Reverted from 12px to 14px */
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.komorebi-active-layout .label {
+    font-family: "JetBrainsMono NFP";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.komorebi-active-layout .label:hover {
+    color: white;
+}
+
+/* KOMOREBI WORKSPACE WIDGET */
+/* ---------------------------------- */
+/* KOMOREBI WORKSPACE WIDGET STYLING */
+/* Styles for the widget showing available workspaces and switching buttons. */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* KOMOREBI WORKSPACE WIDGET STYLING */
+/* Styles for the widget showing available workspaces and switching buttons. */
+/* ---------------------------------- */
+.komorebi-workspaces {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 14px; /* Reverted from 12px to 14px */
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.komorebi-workspaces .ws-btn {
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    width: 24px;
+    height: 24px;
+    margin: 0 5px 0 5px;
+    color: rgba(100, 100, 100, 0);
+    background-color: rgba(40, 40, 40, 255);
+}
+
+.komorebi-workspaces .ws-btn .icon {
+    padding-bottom: 5px;
+}
+
+.komorebi-workspaces .ws-btn:hover,
+.komorebi-workspaces .ws-btn.populated:hover {
+    background-color: #6a6a6a;
+}
+
+.komorebi-workspaces .ws-btn.populated {
+    background-color: rgba(160, 160, 160, 1);
+    width: 28px;
+    color: rgb(0, 0, 0);
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "SN Pro";
+}
+
+.komorebi-workspaces .ws-btn.active {
+    background-color: rgba(235, 235, 235, 1);
+    color: rgb(0, 0, 0);
+    width: 38px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "SN Pro";
+}
+
+.active-window-widget .widget-container {
+    padding: 0 8 0 8;
+}
+
+.active-window-widget .icon {
+    padding: 0 0 0 0;
+}
+
+.active-window-widget .label {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Inter";
+}
+
+/*POWER MENU WIDGET*/
+.uptime {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-family: "Segoe UI";
+    background-color: rgba(0, 0, 0, 150);
+    border: 0px solid #131313;
+    padding: 20;
+    border-radius: 15px;
+    margin-left: 750px;
+    margin-right: 750px;
+    margin-bottom: 240px;
+}
+
+.power-menu-widget {
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 255);
+    border-radius: 14px;
+    padding-right: 10px;
+    padding-left: 3px;
+    margin: 5px 10px 5px 10px;
+    font-size: 18px;
+}
+
+.power-menu-widget .label {
+    font-size: 18px;
+    padding-right: 6px;
+    padding-left: 13px;
+    font-family: "JetBrainsMono NFP";
+}
+
+.power-menu-widget .label:hover {
+    color: white;
+}
+
+.power-menu-popup {
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 150);
+    border: 0px solid #101013;
+}
+
+.power-menu-popup .button {
+    padding: 5;
+    width: 240px;
+    height: 180px;
+    border-radius: 50px;
+    background-color: rgba(100, 100, 100, 25);
+    font-family: "Segoe UI";
+    color: white;
+    border: 0px solid #131313;
+    margin: 15px;
+}
+
+.power-menu-popup .button.hover {
+    background-color: rgba(50, 50, 50, 125);
+    width: 240px;
+    height: 180px;
+    border: 0px solid rgb(55, 56, 75);
+    margin: 15px;
+}
+
+.power-menu-popup .button .label {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.power-menu-popup .button .icon {
+    font-size: 48px;
+    padding-top: 8px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.power-menu-popup .button.cancel .icon {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.power-menu-popup .button.hibernate .icon {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.power-menu-popup .button.restart .icon {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.power-menu-popup .button.cancel .label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.power-menu-popup .button.shutdown .icon {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.power-menu-popup .button.shutdown .label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ICONS */
+.icon {
+    font-size: 14px;
+    padding-right: 0;
+}
+
+/* ACTIVE WINDOW TITLE */
+/* ---------------------------------- */
+/* ACTIVE WINDOW TITLE WIDGET STYLING */
+/* Styles for displaying the title of the currently active window. */
+/* ---------------------------------- */
+.active-window-widget {
+    padding-right: 4px;
+    padding-left: 4px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 14px; /* Reverted from 12px to 14px */
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.active-window-widget .widget-container .label:hover {
+    color: white;
+}
+
+/* ---------------------------------- */
+/* WHKD (WINDOWS HOTKEY) WIDGET STYLING */
+/* Styles for the widget displaying hotkey information and keybind popups. */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* WHKD (WINDOWS HOTKEY) WIDGET STYLING */
+/* Styles for the widget displaying hotkey information and keybind popups. */
+/* ---------------------------------- */
+.whkd-widget {
+    margin: 5px 5px 5px 5px;
+    padding-right: 18px;
+    padding-left: 15px;
+    border-radius: 14px; /* Reverted from 12px to 14px */
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.whkd-widget .icon {
+    font-size: 16px;
+    padding: 0px 0px 0px 0px;
+    font-weight: 400;
+}
+
+.whkd-popup .edit-config-button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 4px 8px 6px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 4px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.whkd-popup .keybind-buttons-container {
+    min-width: 240px;
+}
+
+.whkd-popup .keybind-button {
+    background-color: #000000;
+    color: white;
+    padding: 4px 8px 6px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 3px inset #373737;
+    border-bottom: 3px inset #373737;
+    border-radius: 8px;
+    font-family: "JetBrainsMono NFP";
+}
+
+.whkd-popup .keybind-button.special {
+    background-color: #000000;
+}
+
+.whkd-popup .keybind-row:hover {
+    background-color: rgba(0, 0, 0, 25555);
+    border-radius: 12px;
+}
+
+.whkd-popup .plus-separator {
+    padding: 0 0px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.whkd-popup .filter-input {
+    padding: 0 8px 2px 8px;
+    font-size: 14px;
+    font-family: "Segoe UI", sans-serif;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    background-color: #000000;
+    min-height: 32px;
+}
+
+.whkd-popup .filter-input:focus {
+    border: 1px solid #ffffff;
+}
+
+.whkd-popup .keybind-command {
+    font-size: 13px;
+}
+
+.whkd-popup .keybind-header {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding: 12px 8px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 255);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 8px;
+}
+
+/* ---------------------------------- */
+/* SYSTEM TRAY ICON WIDGET STYLING */
+/* Styles for the system tray icon and its associated pinned items. */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* SYSTEM TRAY ICON WIDGET STYLING */
+/* Styles for the system tray icon and its associated pinned items. */
+/* ---------------------------------- */
+.systray {
+    background: rgba(0, 0, 0, 255);
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 14px; /* Reverted from 12px to 14px */
+}
+
+.systray .unpinned-container {
+    background: transparent;
+    border-radius: 18px;
+}
+
+.systray .pinned-container {
+    background: transparent;
+}
+
+.systray .pinned-container[forceshow="true"] {
+    background: transparent;
+}
+
+.systray .button {
+    border-radius: 4px;
+    padding: 2px 2px;
+    font-family: JetBrainsMono NFP;
+}
+
+.systray .button:hover {
+    background: rgba(0, 0, 0, 255);
+}
+
+.systray .button[dragging="true"] {
+    background: #000000;
+    border-color: #000000;
+}
+
+.systray .unpinned-visibility-btn {
+    border-radius: 4px;
+    height: 20px;
+    width: 16px;
+}
+
+.systray .unpinned-visibility-btn:checked {
+    background: transparent;
+}
+
+.systray .unpinned-visibility-btn:hover {
+    border-radius: 4px;
+    border-color: #000000;
+}
+
+/* ---------------------------------- */
+/* KOMOREBI CONTROL WIDGET STYLING */
+/* Styles for widgets related to Komorebi window manager control (start, stop, reload). */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* KOMOREBI CONTROL WIDGET STYLING */
+/* Styles for widgets related to Komorebi window manager control (start, stop, reload). */
+/* ---------------------------------- */
+.komorebi-control-widget {
+    background-color: rgba(0, 0, 0, 255);
+    margin: 5 5 5 10;
+    border-radius: 14px; /* Reverted from 12px to 14px */
+}
+
+.komorebi-control-widget .label {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    padding-left: 8;
+    padding-right: 8;
+}
+
+.komorebi-control-menu {
+    background-color: rgba(0, 0, 0, 155);
+}
+
+.komorebi-control-menu .button {
+    color: rgba(255, 255, 255, 1);
+    padding: 8px 16px;
+    font-size: 32px;
+    border-radius: 18px;
+    background-color: rgba(0, 0, 0, 255.6);
+}
+
+.komorebi-control-menu .button.active {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.komorebi-control-menu .button:disabled,
+.komorebi-control-menu .button.active:disabled {
+    background-color: rgba(0, 0, 0, 255);
+    color: rgba(0, 0, 0, 255);
+}
+
+.komorebi-control-menu .footer .text {
+    font-size: 12px;
+    color: #ffffff;
+}
+
+/* ---------------------------------- */
+/* POMODORO TIMER WIDGET STYLING */
+/* Styles for the Pomodoro timer widget and its associated menu elements. */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* POMODORO TIMER WIDGET STYLING */
+/* Styles for the Pomodoro timer widget and its associated menu elements. */
+/* ---------------------------------- */
+.pomodoro-widget {
+    padding: 2px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 14px; /* Reverted from 12px to 14px */
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.pomodoro-widget .icon {
+    font-size: 14px;
+    padding-right: 4px;
+}
+
+.pomodoro-widget .label.paused,
+.pomodoro-widget .icon.paused {
+    color: #7d7e8b;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.pomodoro-widget .label.work,
+.pomodoro-widget .icon.work {
+    color: #cecfd1;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.pomodoro-widget .label.break,
+.pomodoro-widget .icon.break {
+    color: #89b4fa;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* Pomodoro menu styling */
+.pomodoro-menu {
+    background-color: rgba(0, 0, 0, 255);
+    border-radius: 18px;
+}
+
+.pomodoro-menu .header {
+    font-size: 16px;
+    font-weight: 400;
+    max-height: 0px;
+    color: #ffffff;
+}
+
+.pomodoro-menu .status {
+    font-size: 18px;
+    font-weight: 400;
+    color: #cecfd1;
+}
+
+.pomodoro-menu .session {
+    font-size: 12px;
+    color: #cecfd1;
+}
+
+.pomodoro-menu .button {
+    background-color: rgba(0, 0, 0, 255);
+    color: #cecfd1;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+.pomodoro-menu .button.start {
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.pomodoro-menu .button.reset {
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.pomodoro-menu .button:hover {
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.pomodoro-menu .button.pause {
+    background-color: rgba(0, 0, 0, 255);
+    color: #cecfd1;
+}
+
+.pomodoro-menu .button:pressed {
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.komorebi-layout-menu {
+    border: none;
+    background-color: rgba(0, 0, 0, 155);
+}
+
+.komorebi-layout-menu .menu-item {
+    padding: 8px 16px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 255);
+    font-weight: 900;
+}
+
+.komorebi-layout-menu .menu-item-icon {
+    color: #cecfd1;
+    font-size: 16px;
+}
+
+.komorebi-layout-menu .menu-item-text {
+    font-family: "Segoe UI";
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.komorebi-layout-menu .menu-item:hover {
+    background-color: rgba(0, 0, 0, 255);
+    color: #fff;
+}
+
+.komorebi-layout-menu .separator {
+    max-height: 1px;
+    background-color: rgba(0, 0, 0, 2555);
+}
+
+/* ---------------------------------- */
+/* NOTES WIDGET STYLING */
+/* Styles for the widget displaying quick notes and its associated menu. */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* NOTES WIDGET STYLING */
+/* Styles for the widget displaying quick notes and its associated menu. */
+/* ---------------------------------- */
+.notes-widget {
+    margin: 5px 5px 5px 5px;
+    background-color: rgba(0, 0, 0, 255);
+    border-radius: 14px; /* Reverted from 12px to 14px */
+}
+
+.notes-widget .label {
+    font-family: "JetBrainsMono NFP";
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 8 2 8;
+}
+
+.notes-widget .icon {
+    font-size: 13px;
+    color: #cecfd1;
+    padding: 0 3 3 3;
+}
+
+/* Notes Widget Menu */
+.notes-menu {
+    min-width: 400px;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 155);
+}
+
+.notes-menu .note-item {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 255);
+}
+
+.notes-menu .note-item:hover {
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.notes-menu .note-item .icon {
+    font-size: 16px;
+    padding: 0 4px;
+}
+
+.notes-menu .copy-button {
+    color: #cecfd1;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.notes-menu .delete-button {
+    color: #cecfd1;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 7px 8px;
+    border-radius: 3px;
+}
+
+.notes-menu .delete-button:hover {
+    background-color: rgba(128, 128, 128, 0);
+}
+
+.notes-menu .note-item .title {
+    font-size: 13px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notes-menu .note-item .date {
+    font-size: 12px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.notes-menu .empty-list {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #cccccc;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px 0 20px 0;
+}
+
+.notes-menu .add-button,
+.notes-menu .cancel-button {
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 255);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notes-menu .cancel-button {
+    margin-left: 4px;
+}
+
+.notes-menu .add-button:hover,
+.notes-menu .cancel-button:hover {
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.notes-menu .scroll-area {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.notes-menu .note-input {
+    background-color: rgba(0, 0, 0, 255);
+    border: 1px solid rgba(0, 0, 0, 255);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    max-height: 30px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.note-input:focus {
+    border: 90px solid #cecfd1;
+}
+
+/* ---------------------------------- */
+/* KOMOREBI STACK WIDGET */
+/* Styles for the Komorebi window stack widget. */
+/* ---------------------------------- */
+.komorebi-stack {
+    margin: 5 0 5 0;
+    border-radius: 14px; /* Reverted from 12px to 14px */
+}
+
+.komorebi-stack .widget-container {
+    border-radius: 14px; /* Reverted from 12px to 14px */
+}
+
+.komorebi-stack .window {
+    background-color: rgba(0, 0, 0, 100);
+    border-radius: 14px; /* Reverted from 12px to 14px */
+    border: none;
+    padding: 0 10 0 10;
+    margin: 0 2 0 2;
+}
+
+.komorebi-stack .window.active {
+    background-color: rgba(0, 0, 0, 255);
+    border-radius: 14px;
+}
+
+.komorebi-stack .window .label {
+    margin-top: 1px;
+}
+
+.komorebi-stack .window.active .label {
+    margin-top: 1px;
+}
+
+.tooltip {
+    background-color: rgba(0, 0, 0, 200);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 255);
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: "Segoe UI";
+    font-weight: 400;
+    margin-top: 4px;
+}

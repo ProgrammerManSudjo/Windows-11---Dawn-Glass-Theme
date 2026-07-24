@@ -1,0 +1,5 @@
+TaskbarHeight: 62
+IconSize: 24
+TaskbarButtonWidth: 54
+IconSizeSmall: 0
+TaskbarButtonWidthSmall: 0

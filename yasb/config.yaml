@@ -1,0 +1,495 @@
+# ==================================
+# CORE CONFIGURATION SETTINGS
+# These settings control general behavior for Yasb.
+# ==================================
+watch_stylesheet: true
+watch_config: true
+show_systray: false
+debug: false
+
+# ==================================
+# KOMOREBI INTEGRATION CONFIGURATION
+# Settings related to running and controlling the Komorebi window manager.
+# ==================================
+komorebi:
+  start_command: "Komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic.exe reload-configuration"
+
+# ==================================
+# BARS CONFIGURATION
+# Defines the structure and appearance of the status bars.
+# ==================================
+bars:
+  # Configuration for the primary status bar (usually on the main monitor).
+  status-bar:
+    enabled: true
+    class_name: "yasb-bar"
+    screens: ["ASUS VG249Q1A"]
+    alignment:
+      position: "top"
+      center: true
+    blur_effect:
+      enabled: true
+      dark_mode: true
+      round_corners: true
+      border_color: System
+    window_flags:
+      always_on_top: true
+      windows_app_bar: true
+      hide_on_fullscreen: true
+      auto_hide: false
+    dimensions:
+      width: 60%
+      height: 58
+    padding:
+      top: 12
+      left: 0
+      bottom: 0
+      right: 0
+    animation:
+      enabled: True
+      duration: 450
+    widgets:
+      left: ["komorebi_control", "komorebi_stack", "active_window"]
+      center: ["whkd", "komorebi_workspaces", "komorebi_active_layout"]
+      right: ["clock", "power_menu"]
+
+  # Configuration for a secondary status bar (e.g., on a second monitor).
+  status-bar-2:
+    enabled: true
+    class_name: "yasb-bar"
+    screens: ["PHL 242E1GJ"]
+    alignment:
+      position: "top"
+      center: true
+    blur_effect:
+      enabled: true
+      dark_mode: true
+      round_corners: true
+      border_color: System
+    window_flags:
+      always_on_top: true
+      windows_app_bar: true
+      hide_on_fullscreen: true
+      auto_hide: false
+    dimensions:
+      width: "96%"
+      height: 58
+    padding:
+      top: 12
+      left: 0
+      right: 0
+      bottom: 0
+    widgets:
+      left: ["komorebi_control", "komorebi_stack", "active_window"]
+      center: ["whkd", "komorebi_workspaces", "komorebi_active_layout"]
+      right: ["clock", "power_menu"]
+
+  status-bar-3:
+    enabled: true
+    class_name: "yasb-bar"
+    screens: ["*"]
+    alignment:
+      position: "top"
+      center: true
+    blur_effect:
+      enabled: true
+      dark_mode: true
+      round_corners: true
+      border_color: System
+    window_flags:
+      always_on_top: true
+      windows_app_bar: true
+      hide_on_fullscreen: true
+      auto_hide: false
+    dimensions:
+      width: 60%
+      height: 58
+    padding:
+      top: 12
+      left: 0
+      bottom: 0
+      right: 0
+    animation:
+      enabled: True
+      duration: 450
+    widgets:
+      left: ["komorebi_control", "komorebi_stack", "active_window"]
+      center: ["whkd", "komorebi_workspaces", "komorebi_active_layout"]
+      right: ["clock", "power_menu"]
+
+
+# ==================================
+# WIDGET CONFIGURATION
+# Defines the appearance and behavior of individual widgets.
+# ==================================
+widgets:
+  # ACTIVE WINDOW TITLE WIDGET
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      animation:
+        enabled: true
+        type: fadeInOut
+        duration: 200
+      label: "{win[title]}"
+      label_no_window: "Inactive_Window"
+      label_icon: true
+      label_icon_size: 16
+      max_length: 14
+      max_length_ellipsis: "_"
+      monitor_exclusive: false
+
+  # CLOCK WIDGET
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%A %d %B, %H:%M}"
+      label_alt: "{%A %d %B %Y, %H:%M}"
+      locale: ""
+      update_interval: 1000
+      timezones: []
+      icons:
+        clock_01: "\udb85\udc3f"
+        clock_02: "\udb85\udc40"
+        clock_03: "\udb85\udc41"
+        clock_04: "\udb85\udc42"
+        clock_05: "\udb85\udc43"
+        clock_06: "\udb85\udc44"
+        clock_07: "\udb85\udc45"
+        clock_08: "\udb85\udc46"
+        clock_09: "\udb85\udc47"
+        clock_10: "\udb85\udc48"
+        clock_11: "\udb85\udc49"
+        clock_12: "\udb85\udc4a"
+        clock_16: "SNACK TIME !"
+        clock_21: "Zzz..."
+        clock_22: "Zzz..."
+        clock_23: "Zzz..."
+      alarm_icons:
+        enabled: "\uf0f3"
+        disabled: "\uf0a2"
+        snooze: "\uf1f6"
+      calendar:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_holidays: false
+        show_week_numbers: false
+        country_code: "AR"
+        holiday_color: "#FF6464"
+        extended: false
+      callbacks:
+        on_left: "toggle_calendar"
+        on_middle: "next_timezone"
+        on_right: "toggle_label"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
+  # KOMOREBI WORKSPACES WIDGET
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "Komorebi Config Offline"
+      label_workspace_btn: "{name}"
+      label_workspace_active_btn: "{name}"
+      label_workspace_populated_btn: "{name}"
+      label_float_override: "\uebf9"
+      label_default_name: ""
+      label_zero_index: false
+      hide_empty_workspaces: true
+      hide_if_offline: false
+      reverse_scroll_direction: true
+      enable_scroll_switching: true
+      animation: true
+      app_icons:
+        enabled_populated: false
+        enabled_active: false
+        size: 12
+        max_icons: 0
+        hide_label: false
+        hide_duplicates: false
+        hide_floating: false
+      toggle_workspace_layer:
+        enabled: false
+        tiling_label: "Tiling"
+        floating_label: "Floating"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+
+  # KOMOREBI ACTIVE LAYOUT WIDGET
+  komorebi_active_layout:
+    type: "komorebi.active_layout.ActiveLayoutWidget"
+    options:
+      hide_if_offline: true
+      label: " {icon} "
+      layouts:
+        [
+          "bsp",
+          "columns",
+          "rows",
+          "grid",
+          "scrolling",
+          "vertical_stack",
+          "horizontal_stack",
+          "ultrawide_vertical_stack",
+          "right_main_vertical_stack",
+        ]
+      layout_icons:
+        bsp: "\uebeb"
+        columns: "\uebf7"
+        rows: "\uec01"
+        grid: "\udb81\udf58"
+        scrolling: "\uebf7"
+        vertical_stack: "\uebee"
+        horizontal_stack: "\uebf0"
+        ultrawide_vertical_stack: "\uebee"
+        right_main_vertical_stack: "\uebf1"
+        monocle: "\uf06f"
+        maximized: "\uf06f"
+        floating: "\uf2d2"
+        paused: "\udb83\udf89"
+        tiling: "\udb81\ude40"
+      callbacks:
+        on_left: "toggle_layout_menu"
+        on_middle: "next_layout"
+        on_right: "prev_layout"
+      layout_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "left"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_layout_icons: true
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
+  # WHKD WIDGET
+  whkd:
+    type: "yasb.whkd.WhkdWidget"
+    options:
+      label: "<span>\udb81\ude35</span>"
+      special_keys:
+        - key: "win"
+          key_replace: "\ue70f"
+        - key: "ctrl"
+          key_replace: "Ctrl"
+        - key: "alt"
+          key_replace: "Alt"
+        - key: "shift"
+          key_replace: "Shift"
+        - key: "left"
+          key_replace: "\u2190"
+        - key: "right"
+          key_replace: "\u2192"
+        - key: "up"
+          key_replace: "\u2191"
+        - key: "down"
+          key_replace: "\u2193"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
+  # POWER MENU WIDGET
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\udb81\udc25"
+      uptime: True
+      blur: false
+      blur_background: True
+      animation_duration: 350
+      button_row: 3
+      buttons:
+        lock: ["\uea75", "Lock"]
+        signout: ["\udb80\udf43", "Sign out"]
+        shutdown: ["\uf28e", "Shut Down"]
+        restart: ["\uead2", "Restart"]
+        hibernate: ["\uf28e", "Hibernate"]
+        cancel: ["\udb81\udf3a", "Cancel"]
+
+  # SYSTEM TRAY ICON WIDGET
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "\uf47c"
+      label_expanded: "\uf47d"
+      label_position: "right"
+      icon_size: 12
+      pin_click_modifier: "alt"
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false
+
+  # KOMOREBI CONTROL WIDGET
+  komorebi_control:
+    type: "komorebi.control.KomorebiControlWidget"
+    options:
+      label: "\udb81\ude33"
+      icons:
+        start: "\uead3"
+        stop: "\uead7"
+        reload: "\uead2"
+      run_ahk: false
+      run_whkd: true
+      run_masir: false
+      show_version: true
+      komorebi_menu:
+        blur: True
+        round_corners: True
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "left"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      animation:
+        enabled: True
+        type: "fadeInOut"
+        duration: 300
+
+  # NOTES WIDGET
+  notes:
+    type: "yasb.notes.NotesWidget"
+    options:
+      label: "\uf24a"
+      label_alt: "{count} notes"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        max_title_size: 150
+        show_date_time: false
+      icons:
+        note: "\udb82\udd0c"
+        delete: "\ueab8"
+        copy: "\uebcc"
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
+  # POMODORO TIMER WIDGET
+  pomodoro:
+    type: "yasb.pomodoro.PomodoroWidget"
+    options:
+      label: "\uf252 {remaining}"
+      label_alt: "<span>{icon}</span> {session}/{total_sessions} - {status}"
+      work_duration: 25
+      break_duration: 5
+      long_break_duration: 15
+      long_break_interval: 4
+      auto_start_breaks: true
+      auto_start_work: true
+      sound_notification: true
+      show_notification: true
+      hide_on_break: false
+      session_target: 8
+      icons:
+        work: "\uf252"
+        break: "\uf253"
+        paused: "\uf254"
+      container_padding:
+        top: 0
+        left: 12
+        bottom: 0
+        right: 12
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        circle_background_color: "#09ffffff"
+        circle_work_progress_color: "#88c0d0"
+        circle_break_progress_color: "#a3be8c"
+        circle_thickness: 8
+        circle_size: 160
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "reset_timer"
+        on_right: "toggle_label"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
+  # KOMOREBI STACK WIDGET
+  komorebi_stack:
+    type: "komorebi.stack.StackWidget"
+    options:
+      label_offline: "Offline"
+      label_window: "\udb85\udcfc"
+      label_window_active: "\udb85\udcfb"
+      label_zero_index: false
+      max_length: 8
+      max_length_active: 8
+      max_length_ellipsis: "-"
+      hide_if_offline: true
+      show_icons: "always"
+      show_only_stack: false
+      icon_size: 16
+      animation: true
+      enable_scroll_switching: true
+      container_shadow:
+        enabled: false
+        color: rgba(0,0,0,0.2)
+        offset: [0, 1]
+        radius: 2
+      btn_shadow:
+        enabled: false
+        color: rgba(0,0,0,0.2)
+        offset: [0, 1]
+        radius: 2
+      label_shadow:
+        enabled: false
+        color: rgba(0,0,0,0.2)
+        offset: [0, 1]
+        radius: 2

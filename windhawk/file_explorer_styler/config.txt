@@ -1,0 +1,13 @@
+theme: AddressSearchOnly
+backgroundTranslucentEffect: mica
+backgroundTranslucentEffectRegion: entireWindow
+styleConstants:
+  - ''
+controlStyles:
+  - target: ''
+    styles:
+      - ''
+themeResourceVariables:
+  - ''
+explorerFrameContainerHeight: 0
+xamlDiagnosticsHandling: ''

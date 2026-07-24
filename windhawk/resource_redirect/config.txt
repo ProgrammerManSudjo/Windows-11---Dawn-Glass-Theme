@@ -1,0 +1,9 @@
+iconTheme: Fluent Keys Night|themes/icons/niivu/Fluent%20Keys%20Night.zip
+disableThumbnails: 0
+allResourceRedirect: 0
+themePaths:
+  - ''
+redirectionResourcePaths:
+  - original: ''
+    redirect: ''
+themeFolder: ''

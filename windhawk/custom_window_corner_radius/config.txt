@@ -1,0 +1,3 @@
+radius: 16
+smallRadius: 16
+tooltipRadius: -1
