@@ -70,6 +70,23 @@ Copy the `yasb` folder into `.config` as well.
 ### walls
 Just a personal wallpaper collection — drop into wherever you keep your wallpapers. Got a cool wallpaper you think fits the vibe? Feel free to suggest it via issue or PR.
 
+## Fonts
+
+Pulled from `styles.css` — install these or YASB widgets will fall back to a default font and look off.
+
+**Nerd Fonts** ([get them here](https://www.nerdfonts.com/font-downloads)):
+- `JetBrainsMono Nerd Font` (Propo variant) — used for most widget labels, keybind popups, systray
+- `ProFontWindows Nerd Font` — used on the clock widget
+
+**Google Fonts** ([get them here](https://fonts.google.com)):
+- `Inter` — clock label, active window title
+
+**Other:**
+- `SN Pro` — workspace widget labels ([free download](https://fontsgeek.com/fonts/SN-Pro-Regular))
+- `Segoe UI` — ships with Windows, no install needed
+
+After installing, restart YASB for the fonts to apply.
+
 ## Feedback
 
 This is very much a living project. If you:
