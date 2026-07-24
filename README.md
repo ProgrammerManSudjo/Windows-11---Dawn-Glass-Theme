@@ -104,4 +104,4 @@ This is very much a living project. If you:
 - [ ] More wallpaper variety
 
 ## License
-[Add your license here — MIT is common for dotfiles/rices]
+MIT — see LICENSE for details.
