@@ -70,6 +70,10 @@ Copy the `yasb` folder into `.config` as well.
 ### walls
 Just a personal wallpaper collection — drop into wherever you keep your wallpapers. Got a cool wallpaper you think fits the vibe? Feel free to suggest it via issue or PR.
 
+### File Pilot - File Explorer Alternative
+Not required, but used in the showcase as a faster alternative to Windows Explorer.
+Download it from [filepilot.tech](https://filepilot.tech/download).
+
 ## Fonts
 
 Pulled from `styles.css` — install these or YASB widgets will fall back to a default font and look off.
