@@ -4,7 +4,7 @@
   <img src="readme/readme.png" width="800" alt="Desktop Preview">
 </p>
 
-A Windows desktop rice built around [komorebi](https://github.com/LGUG2Z/komorebi) tiling window manager, with YASB as the status bar, Windhawk for shell tweaks, tacky-borders for window borders, and Rainmeter for extras.
+A Windows desktop rice built around [komorebi](https://github.com/LGUG2Z/komorebi) tiling window manager, with [YASB](https://github.com/amnweb/yasb) as the status bar, Windhawk for shell tweaks, [tacky-borders](https://github.com/lukeyou05/tacky-borders) for window borders, and Rainmeter for extras.
 
 Originally posted in the Komorebi Discord — sharing here so it's easier to track feedback, issues, and updates.
 
